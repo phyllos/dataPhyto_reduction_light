@@ -1,0 +1,100 @@
+========================================
+Job started at Thu Jun 11 10:19:59 CDT 2026
+Job ID: 1723675
+Running on execute-4000.mortimer.hpc.uwm.edu
+========================================
+Working directory: /home/uwm/gengh/Data-cxfel/phytochrome2026/dataPhyto_reduction_light
+Conda env: phytochrome_conda_env
+Python: /home/uwm/gengh/Data-cxfel/conda/envs/phytochrome_conda_env/bin/python
+========================================
+
+========================================================================
+SACLA light-data preprocessing started
+========================================================================
+project_root: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light
+functions_dir: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/Functions_python
+output: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01
+start_from: C1
+data_name: upto1ps
+a,b,c = 54.22, 115.78, 117.08 A
+wavelength = 1.77 A
+uniform delay: ss=155, tmin=-84.0, tmax=550.0, seed=123
+Initial current RSS = 0.06 GB
+Initial process peak RSS = 0.06 GB
+[START] C1 read_partialator_params_light | PID=1993959 | current=0.06 GB | process_peak=0.06 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/partialator_params_phyto_upto1ps.hdf5
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/partialator_params_phyto_upto1ps.dat
+[ END ] C1 read_partialator_params_light | current=0.07 GB | step_peak=0.06 GB | process_peak=0.09 GB
+[START] C2 read_stream_files_light | PID=1993959 | current=0.07 GB | process_peak=0.09 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps.hdf5
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps.dat
+[ END ] C2 read_stream_files_light | current=0.07 GB | step_peak=8.16 GB | process_peak=8.17 GB
+[START] C3 grab_hklI_sacla2021_light | PID=1993959 | current=0.07 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=30s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=60s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=90s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=120s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=150s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=180s | current=8.17 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=210s | current=8.16 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[MONITOR] C3 grab_hklI_sacla2021_light | elapsed=240s | current=8.16 GB | step_peak=8.17 GB | process_peak=8.17 GB
+Saved 139762 hklI files in /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/sacla2021_upto1ps_hklI
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/upto1ps_snapshotInfo.dat
+[ END ] C3 grab_hklI_sacla2021_light | current=0.08 GB | step_peak=8.17 GB | process_peak=8.17 GB
+[START] C4 find_hkl_max_light | PID=1993959 | current=0.08 GB | process_peak=8.17 GB
+[MONITOR] C4 find_hkl_max_light | elapsed=30s | current=0.11 GB | step_peak=0.11 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/hkl_max_upto1ps.dat: h_max=29, k_max=63, l_max=67
+[ END ] C4 find_hkl_max_light | current=0.08 GB | step_peak=0.11 GB | process_peak=8.17 GB
+[START] C5 find_hkl_redundancy_light | PID=1993959 | current=0.08 GB | process_peak=8.17 GB
+[MONITOR] C5 find_hkl_redundancy_light | elapsed=30s | current=0.11 GB | step_peak=0.11 GB | process_peak=8.17 GB
+[MONITOR] C5 find_hkl_redundancy_light | elapsed=60s | current=0.11 GB | step_peak=0.11 GB | process_peak=8.17 GB
+[MONITOR] C5 find_hkl_redundancy_light | elapsed=90s | current=0.11 GB | step_peak=0.11 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/redundancy_upto1ps.hdf5
+[ END ] C5 find_hkl_redundancy_light | current=0.08 GB | step_peak=0.11 GB | process_peak=8.17 GB
+[START] C6 pack_phyto_allInfo_light | PID=1993959 | current=0.08 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps_allInfo.hdf5
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps_allInfo.dat
+[ END ] C6 pack_phyto_allInfo_light | current=0.09 GB | step_peak=0.08 GB | process_peak=8.17 GB
+[START] C7 pack_phyto_final_light | PID=1993959 | current=0.09 GB | process_peak=8.17 GB
+[MONITOR] C7 pack_phyto_final_light | elapsed=30s | current=1.08 GB | step_peak=1.08 GB | process_peak=8.17 GB
+[MONITOR] C7 pack_phyto_final_light | elapsed=60s | current=2.04 GB | step_peak=2.04 GB | process_peak=8.17 GB
+[MONITOR] C7 pack_phyto_final_light | elapsed=90s | current=2.99 GB | step_peak=2.99 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_int_sortdelay_nS135041_nBrg62530.hdf5
+[ END ] C7 pack_phyto_final_light | current=0.08 GB | step_peak=4.29 GB | process_peak=8.17 GB
+[START] C8 generate_uniform_delay_sacla2021_hdf5 | PID=1993959 | current=0.08 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C8_unifdelay.hdf5
+[ END ] C8 generate_uniform_delay_sacla2021_hdf5 | current=0.09 GB | step_peak=0.08 GB | process_peak=8.17 GB
+[START] C9 pack_phyto_light_lpf | PID=1993959 | current=0.09 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C9_LPF.hdf5
+[ END ] C9 pack_phyto_light_lpf | current=0.09 GB | step_peak=0.09 GB | process_peak=8.17 GB
+[START] C11 pack_phyto_light_lpf_drl | PID=1993959 | current=0.09 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C11_LPF_DRL.hdf5
+[ END ] C11 pack_phyto_light_lpf_drl | current=0.09 GB | step_peak=0.09 GB | process_peak=8.17 GB
+[START] C12 pack_phyto_light_lpf_drl_scl | PID=1993959 | current=0.09 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C12_LPF_DRL_SCL_AVG.hkl
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C12_LPF_DRL_SCL.hdf5
+[ END ] C12 pack_phyto_light_lpf_drl_scl | current=0.09 GB | step_peak=0.09 GB | process_peak=8.17 GB
+[START] C13 pack_phyto_light_lpf_drl_scl_bst | PID=1993959 | current=0.09 GB | process_peak=8.17 GB
+Saved /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C13_LPF_DRL_SCL_BST.hdf5
+[ END ] C13 pack_phyto_light_lpf_drl_scl_bst | current=0.09 GB | step_peak=0.09 GB | process_peak=8.17 GB
+========================================================================
+Pipeline complete
+========================================================================
+C1_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/partialator_params_phyto_upto1ps.hdf5
+C2_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps.hdf5
+C3_hklI_folder: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/sacla2021_upto1ps_hklI
+C4_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/hkl_max_upto1ps.dat
+C5_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/redundancy_upto1ps.hdf5
+C6_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/merged_snapshotInfo_phyto_upto1ps_allInfo.hdf5
+C7_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_int_sortdelay_nS135041_nBrg62530.hdf5
+C8_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C8_unifdelay.hdf5
+C9_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C9_LPF.hdf5
+C11_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C11_LPF_DRL.hdf5
+C12_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C12_LPF_DRL_SCL.hdf5
+C13_file: /raid-4002/cxfel/uwm/gengh/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_test01/dataPhyto_upto1ps_C13_LPF_DRL_SCL_BST.hdf5
+Final current RSS = 0.09 GB
+Final process peak RSS = 8.17 GB
+
+========================================
+Job finished at Thu Jun 11 10:29:05 CDT 2026
+========================================

@@ -1,0 +1,14 @@
+name: phytochrome_conda_env
+channels:
+  - defaults
+dependencies:
+  - python=3.14
+  - scipy
+  - h5py
+  - numpy
+  - pyxtal
+  - git
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+prefix: /home/uwm/gengh/Data-cxfel/conda/envs/phytochrome_conda_env

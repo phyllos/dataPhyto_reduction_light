@@ -1,0 +1,67 @@
+General steps for data reduction for phytochrome dataset
+A. Hosseini, Winter-2022
+---------------------------------------------------------------------------
+Run the codes as the following order (e.g., for 3ps data):
+Note: for dark data some other steps need to be done as we have 5 different 
+labels in the STREAM files that include pure dark and light-activated dark.
+---------------------------------------------------------------------------
+
+1. script_read_partialator_params_sacla2021.m
+   input: 3ps.params
+   output: partialator_params_phyto_3ps.dat
+
+2. script_read_stream_files_sacla2021.m
+   input:  3ps.stream
+   output: merged_snapshotInfo_phyto_3ps.dat
+
+3. grab_hklI_sacla2021_light.m
+   input: 3ps.stream
+   output: A) a directory called "sacla2021_3ps_hklI" including *.dat files
+              of (h,k,l,I) for every indexded snapshot.
+           B) 3ps_snapshotInfo.dat including run#, event# and Bragg#
+
+4. find_hkl_max_sacla2021.m
+   input: 3ps_snapshotInfo.dat
+   output: max values of (h,k,l)
+
+5. find_hkl_redundancy_sacla2021.m
+   input: A) 3ps_snapshotInfo.dat
+          B) *.dat files in "sacla2021_3ps_hklI" directrory from step 3 
+   output: the redundancy file from all snapshots. Redundancy contains 
+           multiplicities for every Bragg reflection (h,k,l)
+
+6. script_pack_phyto_allInfo_light.m
+   input: A) merged_snapshotInfo_phyto_3ps.mat
+          B) partialator_params_phyto_3ps.mat
+          C) delays_original.mat
+  
+   output: grabs "run#, event#, DRL, Bragg#, OSF, relB, delay" from two
+           separate files and save them in a single *.dat file. Here all 
+           parameters are sorted based on delay (or event# for dark data).
+
+7. script_pack_phyto_final_light.m
+   input:  redundancy file from step 5
+           *.dat file from step 6
+   output: reads *.dat file from step-6, the redundancy file from step-5,  
+           and goes through *.dat files in hklI directory from step-3 and 
+           then make a single data matrix T and the corresponding mask M.
+
+8. scriptGenerate_uniform_delay.m
+   output: a subset with flattened delay distribution
+
+9. script_pack_phyto_light_lpf.m
+   output: divides every Bragg intensities by Lorentz-Polarization factors
+ 
+10. scriptGenerate_maskDRL.m
+   output: generates a DRL mask 
+
+11. script_pack_phyto_light_lpf_drl.m
+   output: apply DRL mask
+
+12. script_pack_phyto_light_lpf_drl_scl.m
+    output: scale data using OSF and relB
+
+13. script_pack_phyto_light_lpf_drl_scl_bst.m
+    output: normalizes Bragg intensities via multiplicities per Bragg points
+
+

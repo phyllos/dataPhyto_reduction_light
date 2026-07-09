@@ -1,0 +1,43 @@
+# ---------- OS / editor ----------
+.DS_Store
+*~
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.so
+
+# ---------- Conda / env ----------
+conda/
+.env
+.venv/
+venv/
+env/
+.envrc
+
+# ---------- Logs ----------
+logs/**
+!logs/.gitkeep
+!logs/tr_sfx_light_job01-1723675.err
+!logs/tr_sfx_light_job01-1723675.out
+
+# ---------- Outputs ----------
+outputs/**
+!outputs/.gitkeep
+
+# ---------- Large inputs / raw data ----------
+inputs/**/*.stream
+inputs/**/*.params
+inputs/**/*.mat
+
+# keep small config files
+!inputs/**/*.yaml
+!inputs/**/*.yml
+!inputs/**/README.md
+!inputs/**/delays_original.mat
+!inputs/DATA_upto1ps/upto1ps_AVG_of_All.hkl
+
+# ---------- Optional: local scratch / temp ----------
+tmp/
+scratch/
+

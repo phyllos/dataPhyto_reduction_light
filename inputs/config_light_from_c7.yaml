@@ -1,0 +1,30 @@
+## config_light_from_c7.yaml
+## Fast test pipeline: existing C7 packed file -> C8 -> C13
+## Use this first if you already have dataPhyto_upto1ps_int_sortdelay_nS135041_nBrg62530.mat
+
+project_root: /home/uwm/gengh/Data-cxfel/phytochrome2026/dataPhyto_reduction_light
+functions_dir: /home/uwm/gengh/Data-cxfel/phytochrome2026/dataPhyto_reduction_light/Functions_python
+
+start_from: C8
+
+data_name: upto1ps
+c7_file: /home/uwm/gengh/Data-cxfel/phytochrome2026/dataPhyto_reduction_light/inputs/DATA_upto1ps/dataPhyto_upto1ps_int_sortdelay_nS135041_nBrg62530.mat
+output: /home/uwm/gengh/Data-cxfel/phytochrome2026/dataPhyto_reduction_light/outputs/upto1ps_from_C7_test01
+
+## Unit cell from the stream header, in Angstrom
+a: 54.22
+b: 115.78
+c: 117.08
+wavelength: 1.77
+
+## C8 uniform delay parameters
+ss: 155
+tmin: -84
+tmax: 550
+seed: 123
+
+## Options
+remove_negative_pixels: false
+make_drl_mask: false
+use_drl_mask: false
+generate_hkl_avg: true
