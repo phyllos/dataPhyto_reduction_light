@@ -11,4 +11,4 @@ dependencies:
   - matplotlib
   - jupyterlab
   - ipykernel
-prefix: /home/uwm/gengh/Data-cxfel/conda/envs/phytochrome_conda_env
+
