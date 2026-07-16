@@ -2,6 +2,8 @@
 
 This repository runs the SACLA phytochrome **light-data** preprocessing pipeline in Python.  It follows the same practical layout as the dark-data preprocessing code, but the light-data workflow keeps the light-specific fields such as `delay`, `runID`, `eventID`, `OSF`, `relB`, and `DRL`.
 
+TR-SFX = Time-Resolved Serial Femtosecond Crystallography
+
 The pipeline can be run in two modes:
 
 * Remember to change the usrid in your file/path
